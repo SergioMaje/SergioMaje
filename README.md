@@ -4,9 +4,9 @@
 -->
 <div align="center">
 
-# TODO: Tu nombre o título profesional
+# Sergio Alexander Majé Montoya (Desarrollador de Software)
 
-**TODO: una frase corta sobre ti (qué construyes, qué te apasiona).**
+**La Innovación de la tecnología va de la mano con la innovación de la mente**
 
 <a href="https://SergioMaje.github.io/space-portfolio/">
   <img src="assets/galaxy.svg" alt="Sistema solar animado: cada planeta es una categoría de skills y cada luna una skill" width="100%">
@@ -87,12 +87,12 @@ _Cada planeta es una categoría, cada luna una skill, cada estación espacial un
 - **Frontend:** JavaScript (80%), Angular (70%), HTML y CSS (85%). Proyectos: Software de gestión para vidrierías.
 - **Bases de datos:** MySQL (80%), PostgreSQL (65%), Supabase (60%)
 - **DevOps:** Git y GitHub (80%), GitHub Actions (60%), Docker (50%)
-- **Diseño y branding:** Figma (75%), Identidad visual (70%), UI/UX (65%)
+- **Diseño y branding:** Figma (20%), Identidad visual (70%), UI/UX (65%)
 
 ## 📫 Contacto
 
 - 💼 LinkedIn: TODO
-- ✉️ Correo: TODO
+- ✉️ Correo: majesergio856@gmail.com
 - 🌐 Web: [https://SergioMaje.github.io/space-portfolio/](https://SergioMaje.github.io/space-portfolio/)
 
 <sub>Este README se genera automáticamente desde [`skills.json`](skills.json). Para cambiar algo, edita ese archivo y haz push.</sub>
