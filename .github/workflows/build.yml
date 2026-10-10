@@ -1,0 +1,55 @@
+# Regenera assets/galaxy.svg y README.md cuando cambian los datos o los scripts.
+name: Regenerar galaxia
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - skills.json
+      - README.template.md
+      - scripts/**
+      - .github/workflows/build.yml
+  workflow_dispatch:
+  # Telemetría opcional: solo se ejecuta la semanal si activas la variable ENABLE_TELEMETRY=true
+  schedule:
+    - cron: '0 6 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # El cron solo corre si la telemetría está activada; push y manual siempre corren.
+    if: github.event_name != 'schedule' || vars.ENABLE_TELEMETRY == 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validar skills.json
+        run: node scripts/validate.js
+
+      - name: Telemetría (opcional)
+        if: vars.ENABLE_TELEMETRY == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/telemetry.js
+
+      - name: Generar SVG y README
+        run: |
+          node scripts/generate-svg.js
+          node scripts/generate-readme.js
+
+      - name: Commit automático si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets README.md
+          if git diff --cached --quiet; then
+            echo "Sin cambios que publicar."
+          else
+            git commit -m "chore: regenerar galaxia y README [skip ci]"
+            git push
+          fi

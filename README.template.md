@@ -30,7 +30,7 @@ _Cada planeta es una categoría, cada luna una skill, cada estación espacial un
 
 {{DETALLES}}
 
-## 📝 Resumen en texto
+{{TELEMETRIA}}## 📝 Resumen en texto
 
 {{LISTA_TEXTO}}
 

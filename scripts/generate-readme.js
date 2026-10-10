@@ -1,5 +1,5 @@
 // Genera README.md a partir de README.template.md + skills.json.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { cargarSkills } from './validate.js';
@@ -39,12 +39,23 @@ const texto = datos.categories.map((c) =>
   (c.projects.length ? `. Proyectos: ${c.projects.map((p) => p.name).join(', ')}.` : '')
 ).join('\n');
 
+// Telemetría opcional: solo aparece si scripts/telemetry.js generó assets/telemetry.json
+let telemetria = '';
+const rutaTel = resolve(RAIZ, 'assets', 'telemetry.json');
+if (existsSync(rutaTel)) {
+  const t = JSON.parse(readFileSync(rutaTel, 'utf8'));
+  telemetria = '## 📡 Telemetría\n\n' +
+    `**Lenguajes más usados:** ${t.lenguajes.map((l) => `${l.nombre} ${l.porcentaje}%`).join(' · ')}\n\n` +
+    `**Commits en los últimos 30 días:** ${t.commits30d}\n\n`;
+}
+
 const plantilla = readFileSync(resolve(RAIZ, 'README.template.md'), 'utf8');
 const salida = plantilla
   .replaceAll('{{TITULO}}', datos.meta?.title ?? datos.meta?.user ?? 'Portfolio')
   .replaceAll('{{SITE_URL}}', sitio)
   .replaceAll('{{FILA_PLANETAS}}', `${fila}\n\n<sub>${nombres}</sub>`)
   .replaceAll('{{DETALLES}}', detalles)
+  .replaceAll('{{TELEMETRIA}}', telemetria)
   .replaceAll('{{LISTA_TEXTO}}', texto);
 
 writeFileSync(resolve(RAIZ, 'README.md'), salida);
