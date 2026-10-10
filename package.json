@@ -1,0 +1,11 @@
+{
+  "name": "sergiomaje-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "sync": "node scripts/sync-skills.js",
+    "build": "node scripts/validate.js && node scripts/generate-svg.js && node scripts/generate-readme.js"
+  },
+  "engines": { "node": ">=18" }
+}

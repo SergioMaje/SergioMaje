@@ -1,0 +1,77 @@
+{
+  "_aviso": "TODO: los niveles y skills son DATOS DE EJEMPLO. Reemplázalos por los tuyos; este es el único archivo que hay que editar.",
+  "meta": {
+    "user": "SergioMaje",
+    "siteUrl": "https://SergioMaje.github.io/space-portfolio/",
+    "title": "TODO: Tu nombre o título profesional"
+  },
+  "categories": [
+    {
+      "id": "backend",
+      "name": "Backend",
+      "color": "#00e5ff",
+      "skills": [
+        { "name": "Node.js", "level": 85 },
+        { "name": "PHP", "level": 70 },
+        { "name": "REST APIs", "level": 80 }
+      ],
+      "projects": [
+        {
+          "name": "Bourgelat",
+          "url": "",
+          "description": "Sistema de gestión para clínicas veterinarias. TODO: añade el enlace."
+        }
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "color": "#ff4fd8",
+      "skills": [
+        { "name": "JavaScript", "level": 80 },
+        { "name": "Angular", "level": 70 },
+        { "name": "HTML y CSS", "level": 85 }
+      ],
+      "projects": [
+        {
+          "name": "Software de gestión para vidrierías",
+          "url": "",
+          "description": "Aplicación de gestión para negocios de vidrio. TODO: añade el enlace."
+        }
+      ]
+    },
+    {
+      "id": "bases-de-datos",
+      "name": "Bases de datos",
+      "color": "#7cff6b",
+      "skills": [
+        { "name": "MySQL", "level": 80 },
+        { "name": "PostgreSQL", "level": 65 },
+        { "name": "Supabase", "level": 60 }
+      ],
+      "projects": []
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "color": "#ffb84d",
+      "skills": [
+        { "name": "Git y GitHub", "level": 80 },
+        { "name": "GitHub Actions", "level": 60 },
+        { "name": "Docker", "level": 50 }
+      ],
+      "projects": []
+    },
+    {
+      "id": "diseno",
+      "name": "Diseño y branding",
+      "color": "#a78bfa",
+      "skills": [
+        { "name": "Figma", "level": 75 },
+        { "name": "Identidad visual", "level": 70 },
+        { "name": "UI/UX", "level": 65 }
+      ],
+      "projects": []
+    }
+  ]
+}
