@@ -36,7 +36,7 @@ _Cada planeta es una categoría, cada luna una skill, cada estación espacial un
 ![Node.js](https://img.shields.io/badge/Node.js-85%25-00e5ff?style=flat-square&labelColor=0d1117) ![PHP](https://img.shields.io/badge/PHP-70%25-00e5ff?style=flat-square&labelColor=0d1117) ![REST APIs](https://img.shields.io/badge/REST_APIs-80%25-00e5ff?style=flat-square&labelColor=0d1117)
 
 **Proyectos:**
-- **Bourgelat** — Sistema de gestión para clínicas veterinarias. TODO: añade el enlace.
+- **Bourgelat** — Sistema de gestión para clínicas veterinarias. Bourgelat.co
 
 [Ver Backend en 3D →](https://SergioMaje.github.io/space-portfolio/?planet=backend)
 
@@ -48,7 +48,7 @@ _Cada planeta es una categoría, cada luna una skill, cada estación espacial un
 ![JavaScript](https://img.shields.io/badge/JavaScript-80%25-ff4fd8?style=flat-square&labelColor=0d1117) ![Angular](https://img.shields.io/badge/Angular-70%25-ff4fd8?style=flat-square&labelColor=0d1117) ![HTML y CSS](https://img.shields.io/badge/HTML_y_CSS-85%25-ff4fd8?style=flat-square&labelColor=0d1117)
 
 **Proyectos:**
-- **Software de gestión para vidrierías** — Aplicación de gestión para negocios de vidrio. TODO: añade el enlace.
+- **Software de gestión para vidrierías** — Aplicación de gestión para negocios de vidrio. Vidriosystem.co
 
 [Ver Frontend en 3D →](https://SergioMaje.github.io/space-portfolio/?planet=frontend)
 
